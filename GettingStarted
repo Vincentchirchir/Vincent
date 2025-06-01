@@ -40,3 +40,126 @@ print("The buying price of " + product_name + " is " + "Ksh " + str(buying_price
 selling_price=str(input("What is the selling price: "))
 profit=int(selling_price)-int(buying_price)
 print("The profit of " + product_name + " is " + str(profit))
+
+#Formattted strings
+item_code=input("Enter the item code: ")
+item_name=input("Enter the item name: ")
+buying_price=int(input("Enter the item buying price: "))
+selling_price=int(input("Enter the selling price of the item: "))
+print(f'Your item with the code {item_code} was sold at a price of {selling_price}. Meaning you got a profit of {selling_price-buying_price}')
+
+##Difference between method and function
+##Method: functions specific to some kind of object like string only. eg item.UPPER CASE, .LOWER CASE. They only apply to strings and not numbers
+#function: are general purpose functions, they dont belong to strings, numbers, or other kind of 
+
+#Functions
+#len is an example of function
+
+fieldmax_goal= 'To Sell Quality Products at an Affordable Prices'
+print(len(fieldmax_goal))
+
+#methods
+#Below are examples of methods
+
+print(fieldmax_goal.upper())
+print(fieldmax_goal.find('Quality'))
+print(fieldmax_goal.replace(' an Affordable', ' a Cheap'))
+print('Quality' in fieldmax_goal)
+print('Affordable' in fieldmax_goal)
+
+##IF STATEMENTS
+#Checking if an item is in stock
+item_code=input("Enter the item code: ")
+item_name=input("Enter the item name: ")
+buying_price=int(input("Enter the item buying price: "))
+selling_price=int(input("Enter the selling price of the item: "))
+Quantity_sold=int(input("How many items: "))
+opening_stock=80
+stock_left= opening_stock-Quantity_sold
+if stock_left >1:
+    print(f'Your stock level for {item_code}' is {stock_left})
+else:
+    print(f'You are out of stock for item code {item_code}')
+
+
+#if statement continue
+
+good_credit=True
+
+house_price=1000000
+if good_credit:
+    down_payment=10/100*house_price
+    print(f'Your credit is good and thus your downpayment is ${down_payment}')
+else:
+    down_payment=20/100*house_price
+    print(f'Your credit is NOT good thus your downpayment is ${down_payment}')
+
+#Client Validation
+
+phone_price=15000
+client_has_good_credit=False
+
+if client_has_good_credit:
+    down_payment=10/100*phone_price
+    print(f'The customer should pay downpayment of Ksh{down_payment}')
+else:
+    print("Customer do not qualify")
+
+#Logical oprators: AND, OR, NOT = Used when you have multiple conditions
+#Tambul Hustle Youth Group Member Loan qualification
+
+good_monthly_contribution_history=True
+good_loan_history=True
+
+if good_monthly_contribution_history and good_loan_history:
+    print("Member eligible for loan")
+else:
+    print("Member not eligible")
+
+
+#Logical operators
+
+name=input("Enter your full names: ")
+
+if len(name)>10:
+    print("Error, name should be less than 10 characters long.")
+else:
+    print("Name looks good")
+
+
+#While loop
+secret_number=9
+guess_count=0
+guess_limit=3
+while guess_count<guess_limit:
+    guess=int(input("Guess: "))
+    guess_count+=1
+    if guess==secret_number:
+        print("You won!!")
+        break
+else:
+    print("Sorry you failed!!")
+
+
+#Signing up
+import sys
+
+name=input("Enter your full name: ")
+email=input("Enter your valid email address: ")
+password_sign_up=input("Enter a strong password'max of 6 characters to sign up: ")
+if len(str(password_sign_up))>6:
+    print("Error. Password should be less than 6 characters.")
+    sys.exit()
+else:
+    print("Good password")
+
+password_count=0
+password_limit=3
+while password_count<password_limit:
+    password_sign_in=input("Enter your password to sign in: ")
+    password_count+=1
+    if password_sign_up==password_sign_in:
+        print("Log in succesfull")
+        break
+else:
+    print("Incorrect password 3 times. Account blocked")
