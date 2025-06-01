@@ -1,0 +1,42 @@
+##Variables
+#Used to store data in python
+#For example, in the below code, 15000 is stored by price
+#And if you update price later to something like 20000, and you print price, the output will be 20,000
+
+price=15000 #Interger
+print(price)
+name='Vincent' #String
+
+#Imagine you’ve just received a new item for your shop: a pair of Samsung Earbuds priced at Ksh 2,500. You want to write a Python program that stores: 
+# The product name, 
+# The price, 
+# Whether it is a new stock item
+# Write a program that defines three variables for this information.
+
+product_name='Samsung Earbuds'
+price=2500 #In Kenya Shillings
+is_it_new_stock= True
+
+# Receiving Inputs
+#We are using input function
+#It is like button in a remote
+
+product_name=input("Enter the product name: ")
+price=int(input("Enter the product price: "))#You will have to convert this to interger
+is_it_new_stock=input("Is it a new item? yes/no: ")
+print(product_name + ' costs' + ' Ksh' + str(price))
+
+#Profit calculation
+buying_price= int(input("Enter the buying price: "))
+selling_price=price
+profit=int(selling_price)-int(buying_price)
+print('The profit of ' + product_name + ' is ' + str(profit))
+
+
+
+product_name=input("What is the product name: ")
+buying_price=int(input("What is the buying price: "))
+print("The buying price of " + product_name + " is " + "Ksh " + str(buying_price))
+selling_price=str(input("What is the selling price: "))
+profit=int(selling_price)-int(buying_price)
+print("The profit of " + product_name + " is " + str(profit))
